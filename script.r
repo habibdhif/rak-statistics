@@ -24,7 +24,7 @@ data <- read.csv("data.csv",sep = ",")
 new_column_names <- c("submitted_date","weekly_freq","last_taken","last_thrown","average_taken","average_thrown","weekly_consumption_out","sorting_waste","sign_seen","sign_influence","physical_form","fried","sauce","eat_with","sport_hours","status","cloud_cover","wind_speed","tempreature","precipetation","sign","gender","age","meal")
 colnames(data) <- new_column_names
 # Deleting the "sign_influence" column 
-data <- data[,c(1:9,11:ncol(data))]
+data <- data[,-10]
 
 library(plyr)
 # Remapping values
